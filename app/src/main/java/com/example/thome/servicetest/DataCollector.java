@@ -15,6 +15,12 @@ import java.util.Calendar;
 
 /**
  * Klasa pobiera dane o telefonie i zapisuje w plikach oraz kontroluje rozmiar plikow
+ *
+ * Odpalenie serwisu, np. przez mainactivity, lub podczas dodawania widgetu
+ * 
+ *         Intent mServiceIntent = new Intent(MainActivity.this, DataCollector.class);
+ *         mServiceIntent.putExtra("collectBattery", true);
+ *         MainActivity.this.startService(mServiceIntent);
  */
 public class DataCollector extends IntentService {
     private boolean collectBattery = true; // czy zbierac dane o baterii? do kazdej opcji taka zmienna
